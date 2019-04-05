@@ -21,7 +21,7 @@
 </head>
 <body>
 	<div class="jumbotron">
-		<h3>Class.forName 을 통한 커넥션 후 jsp 페이지 작성</h3>
+		<h3>스프링MVC - 도서관리시스템</h3>
 	</div>
 	<div class="container-fluid">
 		<div class="row">
