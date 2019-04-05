@@ -68,7 +68,7 @@
 		$("#myList a[href='#"+tab_select+"']").tab("show");
 	});		
 	$("#myList a[href='#all']").click(function(){		
-		location.href="select.do";
+		location.href="select";
 	});
  });
 </script>
