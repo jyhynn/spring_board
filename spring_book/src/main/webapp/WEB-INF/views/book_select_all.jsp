@@ -17,7 +17,7 @@
 </head>
 <body>
 	<div class="jumbotron">
-		<h3>Class.forName 을 통한 커넥션 후 jsp 페이지 작성</h3>
+		<h3>스프링MVC - 도서관리시스템</h3>
 	</div>
 	<div class="container-fluid">
 		<div class="row">
@@ -70,7 +70,25 @@
 	</div>
  <script>
 	$(function(){		
-		$("#myList a[href='#all']").tab("show");			
+		var msg = "${msg}";
+		var map = "${map}";
+		$("#myList a[href='#all']").tab("show");		
+		if(msg=='insertSuccess'){
+			alert("도서정보 입력 성공!");
+		}else if(msg=='insertFail'){
+			alert("도서정보 입력 실패;");
+		}else if(msg=='RemoveSuccess'){
+			alert("도서정보 삭제 성공!");
+		}else if(msg=='RemoveFail'){
+			alert("도서정보 삭제  실패;");
+		}else if(msg=='UpdateSuccess'){
+			alert("도서정보 수정 성공!");
+		}else if(msg=='UpdateFail'){
+			alert("도서정보 수정 실패;");
+		}
+		if(map=='search'){
+			$("#myList a[href='#search']").tab("show");
+		}
 	});
 </script>
 </body>

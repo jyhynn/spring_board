@@ -13,7 +13,7 @@
 </head>
 <body>
 	<h4>삭제할 도서 코드 번호를 입력해 주세요</h4>
-	<form action="/mvc_dbcp_books/delete.do" method="post">
+	<form action="delete" method="post">
 		<div class="form-group">
 			<input type="number" name="code" class="form-control form-control-lg" required="required" placeholder="도서코드입력"/>
 		</div>

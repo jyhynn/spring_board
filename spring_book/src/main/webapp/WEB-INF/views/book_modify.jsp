@@ -13,7 +13,7 @@
 </head>
 <body>
 	<h4>가격을 변경할 책의 코드번호와 가격을 입력해주세요</h4>
-	<form action="/mvc_dbcp_books/modify.do" method="post">
+	<form action="modify" method="post">
 		<div class="form-row">
 			<div class="form-group col-md-6">
 				<input type="text" name="code" class="form-control form-control-lg" required="required" placeholder="도서코드입력" />

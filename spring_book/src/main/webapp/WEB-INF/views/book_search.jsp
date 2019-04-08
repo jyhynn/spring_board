@@ -13,7 +13,7 @@
 </head>
 <body>
 <h4>검색할 도서정보를 입력해 주세요</h4>
-<form action="/mvc_dbcp_books/search.do" method="post">
+<form action="search" method="post">
 	<div class="form-row">
 		<div class="form-group col-md-6">
 			<select name="criteria" id="" class="form-control form-control-lg">

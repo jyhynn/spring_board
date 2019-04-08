@@ -17,7 +17,7 @@
 <body>
 	
 	<div class="jumbotron">
-		<h3>Class.forName을 통한 커넥션 jsp 페이지 작성</h3>
+		<h3>스프링MVC - 도서관리시스템</h3>
 	</div>
 	<div class="container-fluid">
 		<div class="row">
@@ -33,6 +33,12 @@
 			<div class="col-xl-9">
 				<div class="tab-content" id="nav-tabContent">
 					<div class="tab-pane fade" role="tabpanel" id="all">
+
+					</div>
+					<div class="tab-pane fade" role="tabpanel" id="delete">
+						<jsp:include page="book_delete.jsp"/>
+					</div>
+					<div class="tab-pane fade" role="tabpanel" id="search">
 						<table class="table table-bordered">
 							<thead class="thead-dark">
 								<th scope="col">코 드</th>
@@ -51,12 +57,6 @@
 							</c:forEach>
 							</tbody>
 						</table>
-					</div>
-					<div class="tab-pane fade" role="tabpanel" id="delete">
-						<jsp:include page="book_delete.jsp"/>
-					</div>
-					<div class="tab-pane fade" role="tabpanel" id="search">
-						<jsp:include page="book_search.jsp"/>
 					</div> 
 					<div class="tab-pane fade" role="tabpanel" id="modify">
 						<jsp:include page="book_modify.jsp"/>
@@ -68,18 +68,19 @@
 			</div>
 		</div>
 	</div>
-<form action="/mvc_dbcp_books/index.jsp" method="post" id="myform2">
+<!-- <form action="/mvc_dbcp_books/index.jsp" method="post" id="myform2">
 	<input type="hidden" name="tab_select" id="tab_select" value="search" />
-</form>		
+</form>	 -->	
 <script>
 	$(function(){
 		$("#myList a[href='#search']").tab("show");	
 		
-		$("#myList a[href='#search']").click(function(){			
-			$("#myform2").submit();
+		$("#myList a[href='#search']").click(function(){
+			location.href="searchForm";
+			/* $("#myform2").submit(); */
 		});
 		$("#myList a[href='#all']").click(function(){
-			location.href="select.do";
+			location.href="select";
 		});
 	});
 </script>

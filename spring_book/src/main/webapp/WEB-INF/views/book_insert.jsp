@@ -12,7 +12,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="/mvc_dbcp_books/insert.do" method="post">
+	<form action="/insert" method="post" id="myform">
 		<div class="form-group">
 			<label for="code">code</label>
 			<input type="text" class="form-control" id="code" name="code" placeholder="도서코드입력" required="required"/>
@@ -27,7 +27,7 @@
 		</div>
 		<div class="form-group">
 			<label for="price">price</label>
-			<input type="number" class="form-control" id="price" name="price" placeholder="도서가격입력" required="required"/>
+			<input type="text" class="form-control" maxlength="5" id="price" name="price" placeholder="도서가격입력" required="required"/>
 		</div>
 		<button type="submit" class="btn btn-primary">입력</button>
 		<button type="reset" class="btn btn-secondary">취소</button>
