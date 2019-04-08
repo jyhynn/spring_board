@@ -8,6 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -31,4 +32,14 @@ public class HomeController {
 		
 		return "index";
 	}	
+	
+	//404 오류 페이지 처리
+	//	404 페이지형태 1. 컨트롤러 없이 404
+	//			   2. 컨틀롤러 있이 404-1 : 파라미터처리 요구
+	//			   3. 컨트롤러 있이 404-2 : 컨트롤러가 받아서 넘어갈 jsp페이지가 없을 때 생김
+	@GetMapping("/except")
+	public void exceptionGet(int no) {
+		log.info("Exception 테스트");
+	}
+	
 }

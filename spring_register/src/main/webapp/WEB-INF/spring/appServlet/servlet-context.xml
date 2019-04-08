@@ -24,7 +24,14 @@
 	<!-- 클래스에 어노테이션 붙어있으면 여기다 모두 추가해야 함 -->
 	<context:component-scan base-package="com.spring.controller" />
 	<context:component-scan base-package="com.spring.service" />
+	<context:component-scan base-package="com.spring.exception" />
 	
-	
+	<beans:bean class="com.spring.controller.LoginInterceptor" id="auth"/>
+	<interceptors>
+		<interceptor>
+			<mapping path="/member/changePwd"/>
+			<beans:ref bean="auth"/>
+		</interceptor>
+	</interceptors>
 	
 </beans:beans>

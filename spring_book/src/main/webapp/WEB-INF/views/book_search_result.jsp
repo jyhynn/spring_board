@@ -76,7 +76,7 @@
 		$("#myList a[href='#search']").tab("show");	
 		
 		$("#myList a[href='#search']").click(function(){
-			location.href="searchForm";
+			location.href="search";
 			/* $("#myform2").submit(); */
 		});
 		$("#myList a[href='#all']").click(function(){
