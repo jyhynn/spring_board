@@ -33,7 +33,7 @@
 	<logger name="com.spring.controller" level="info" />
 	<logger name="com.spring.service" level="info" />
 	<logger name="com.spring.mapper" level="debug"/>
-	<logger name="com.spring.board" level="debug"/>
+	<logger name="com.spring.controller" level="debug"/>
 
 	<!-- 3rdparty Loggers -->
 	<logger name="org.springframework.core" level="info" />
